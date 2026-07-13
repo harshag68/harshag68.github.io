@@ -1,153 +1,150 @@
-# Shriharsha Gandani - Senior Data Engineer Portfolio
+<h1 align="center">Hi 👋, I'm Shriharsha Gandani</h1>
+<h3 align="center">Senior Data Engineer | Enterprise ETL | GCP · BigQuery · Vertex AI · Agentic AI · SQL Optimization</h3>
 
-An interactive, high-fidelity portfolio website built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. Designed with a modern, high-contrast aesthetic, this single-page application highlights professional milestones, key projects, core technical skills, certifications, and an interactive AI Agent console.
+<p align="center">
+  Passionate about building scalable data pipelines, optimizing SQL queries, and deploying intelligent, multi-agent AI systems on modern cloud platforms.
+</p>
 
-## 🚀 How to Deploy to GitHub Pages
-
-Deploying a Vite-built React application to GitHub Pages is highly straightforward. Below are the two recommended methods:
-
----
-
-### Method 1: Automated Deployment via GitHub Actions (Recommended)
-
-This is the cleanest and most modern approach. It builds and deploys your portfolio automatically every time you push to the `main` branch, without needing to commit your built `dist/` files manually.
-
-#### Step 1: Configure Vite Base Path
-Open `vite.config.ts` and set the `base` property to match your GitHub repository name:
-```typescript
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  plugins: [react()],
-  base: '/<your-github-repo-name>/', // Replace with your exact repository name (e.g., '/portfolio/')
-});
-```
-
-#### Step 2: Create a GitHub Actions Workflow
-In your local project, create a directory structure `.github/workflows/` and add a new file named `deploy.yml`:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main # Or your default branch
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-weight: 20
-          cache: 'npm'
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build Application
-        run: npm run build
-
-      - name: Upload Build Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-#### Step 3: Enable Pages in GitHub Settings
-1. Go to your repository on GitHub.
-2. Navigate to **Settings** -> **Pages**.
-3. Under **Build and deployment** -> **Source**, select **GitHub Actions**.
-4. Push your changes to your `main` branch, and the workflow will build and publish your site!
+<p align="center">
+  <a href="https://github.com/harshag68">
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://linkedin.com/in/harsha68">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">
+  </a>
+</p>
 
 ---
 
-### Method 2: Manual Deployment via the `gh-pages` Package
+## 🚀 About Me
 
-If you prefer deploying via a local CLI script, you can use the standard `gh-pages` helper package.
-
-#### Step 1: Configure Vite Base Path
-Ensure your `vite.config.ts` contains the correct repository base path:
-```typescript
-base: '/<your-github-repo-name>/',
-```
-
-#### Step 2: Install `gh-pages`
-Install the package as a development dependency:
-```bash
-npm install gh-pages --save-dev
-```
-
-#### Step 3: Update `package.json` Scripts
-Add `predeploy` and `deploy` scripts to your `package.json`:
-```json
-"scripts": {
-  "dev": "vite",
-  "build": "tsc && vite build",
-  "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-```
-
-#### Step 4: Run the Deployment Command
-Execute the following command in your terminal to build and push the production assets to a dedicated `gh-pages` branch on GitHub:
-```bash
-npm run deploy
-```
-
-#### Step 5: Configure GitHub Pages Source
-1. Go to your repository on GitHub.
-2. Navigate to **Settings** -> **Pages**.
-3. Under **Build and deployment** -> **Branch**, select `gh-pages` and `/ (root)`.
-4. Click **Save**. Your site will be online shortly!
+- 🎓 **Master of Science in Artificial Intelligence** candidate at IWU National & Global.
+- 🎓 **Master of Science in Business Analytics** graduate from the University of North Texas.
+- 💻 **5 Years** of enterprise experience in data engineering, ETL pipelines, and SQL optimization.
+- 🛠 Experienced in managing large-scale datasets (**10M+ records**) using SQL Server, BigQuery, and AWS Redshift.
+- 🤖 Specialized in designing and deploying **multi-agent AI systems** and LLM workflows using GCP Vertex AI and Gemini models.
+- 🎯 Focused on delivering robust, automated, and scalable cloud-native data architectures.
 
 ---
 
-## 🛠️ Local Development
+## 🛠 Tech Stack
 
-To run this portfolio locally on your computer:
+### Languages & Databases
+- **Python** (Data manipulation, API integration, pipeline orchestration)
+- **SQL** (Complex queries, schema design, high-performance execution plans)
+- **Microsoft SQL Server** (SSIS, indexing, partitioning, ERP integration)
+- **BigQuery (GCP)** & **AWS Redshift** (Cloud data warehousing, big data analysis)
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/harshag68/<your-repo-name>.git
-   cd <your-repo-name>
+### Data Engineering & Cloud Platforms
+- **ETL / ELT Development** & Pipeline Design
+- **Google Cloud Platform (GCP)** (Vertex AI, Cloud Functions, BigQuery)
+- **Amazon Web Services (AWS)** (Redshift, S3, EC2)
+- **Azure DevOps** (CI/CD, version control, task tracking)
+
+### AI & Agentic Orchestration
+- **Multi-Agent Systems** & LLM Workflow Design
+- **Vertex AI & Gemini Models** (Function calling, reasoning, integration)
+- **Prompt Engineering** (Advanced optimization and system instructions)
+
+### Tools & Dashboards
+- **Power BI** & **Tableau** (Business intelligence, interactive reporting dashboards)
+- **Git & GitHub** (Version control, collaboration)
+- **SSIS** (Integration services)
+
+---
+
+## 📌 Featured Projects
+
+### 🤖 [TieBreaker](https://github.com/harshag68/TieBreaker)
+An AI-powered decision-intelligence assistant designed to guide users through conflicting choices by objectively evaluating trade-offs, weighting constraints, and delivering definitive recommendations using Gemini AI.
+
+### 📊 [Spotify ETL Pipeline](https://github.com/harshag68/SpotifyETLPipeline)
+An end-to-end data pipeline that extracts multi-market music metadata across 20 global markets, applies strict quality transformation rules, and loads the structured records into AWS Redshift under automated orchestration.
+
+### 🌟 [Manuel El Manual](https://github.com/harshag68/Manuel-El-Manual)
+A GCP-hosted multi-agent AI orchestration system built with Vertex AI and Gemini models to implement advanced documentation workflows and structured query processing.
+
+### 🔋 [Atomic OS](https://github.com/harshag68/Atomic_OS)
+A full-stack habit tracking application built with React 18, TypeScript, and Google Firebase (Auth + Firestore) integrated with Gemini AI for automated habit verification.
+
+---
+
+## 🏆 Achievements & Milestones
+🏅 Deployed production-grade enterprise ETL pipelines managing **10 million+ daily transactional rows**.  
+🏅 Developed custom AI agents on GCP, streamlining manual document synthesis with automated LLM reasoning.  
+🏅 Optimized legacy SQL Server execution plans to improve high-throughput processing times by index tuning and partition scaling.
+
+---
+
+## 📜 Certifications
+✔ **Google AI Professional Certificate** — Google (June 2026)  
+✔ **Agentic AI: Multi-Agent Systems** — Google (Dec 2025)  
+✔ **Prompt Engineering - 1 Million Prompters** — Google / Partners (2025)  
+✔ **Microsoft Certified: Azure Data Engineer Associate (DP-203)** — Microsoft (May 2023)  
+
+---
+
+## 📫 Connect With Me
+📧 Email: **gandanishriharsha2@gmail.com**  
+🐙 GitHub: **https://github.com/harshag68**  
+💼 LinkedIn: **https://linkedin.com/in/harsha68**  
+
+---
+
+## ⚙️ How to Deploy to GitHub Pages
+
+Deploying this portfolio application to GitHub Pages is highly straightforward:
+
+### Method: Automated Deployment via GitHub Actions
+This builds and deploys your portfolio automatically every time you push to the `main` branch.
+
+1. **Configure Vite Base Path**:
+   Open `vite.config.ts` and set the `base` property to match your GitHub repository name:
+   ```typescript
+   export default defineConfig({
+     plugins: [react()],
+     base: '/<your-github-repo-name>/', // e.g., '/portfolio/'
+   });
    ```
 
-2. **Install dependencies**:
-   ```bash
-   npm install
+2. **Create GitHub Actions Workflow**:
+   Create `.github/workflows/deploy.yml`:
+   ```yaml
+   name: Deploy to GitHub Pages
+   on:
+     push:
+       branches: [main]
+   permissions:
+     contents: write
+     pages: write
+     id-token: write
+   concurrency:
+     group: "pages"
+     cancel-in-progress: true
+   jobs:
+     deploy:
+       environment:
+         name: github-pages
+         url: ${{ steps.deployment.outputs.page_url }}
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - uses: actions/setup-node@v4
+           with:
+             node-version: 20
+             cache: 'npm'
+         - run: npm ci
+         - run: npm run build
+         - uses: actions/upload-pages-artifact@v3
+           with:
+             path: './dist'
+         - id: deployment
+           uses: actions/deploy-pages@v4
    ```
 
-3. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
+3. **Enable Pages in Repo Settings**:
+   Under **Settings** -> **Pages** of your repository on GitHub, select **GitHub Actions** as your build source.
 
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+---
+
+<h3 align="center">✨ Keep Learning • Keep Building • Keep Growing ✨</h3>
