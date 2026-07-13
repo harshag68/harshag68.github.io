@@ -1,13 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shriharsha Gandani | Data Engineer Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shriharsha Gandani | AI Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --accent-color: #38bdf8;
+            --card-bg: #1e293b;
+            --muted-text: #94a3b8;
+            --border-color: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+        h1 { font-size: 2.5rem; margin: 0 0 0.5rem 0; color: #fff; }
+        h2 { font-size: 1.8rem; color: var(--accent-color); margin-top: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+        h3 { font-size: 1.3rem; margin: 0 0 0.5rem 0; color: #fff; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .section { margin-bottom: 3.5rem; }
+        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+        @media (max-width: 768px) { .meta-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+        .card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+        .tag { background: #334155; color: var(--accent-color); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-family: monospace; }
+        .details-btn { background: none; border: 1px solid var(--accent-color); color: var(--accent-color); padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; margin-top: 1rem; display: inline-block; transition: all 0.2s ease; }
+        .details-btn:hover { background: var(--accent-color); color: var(--bg-color); text-decoration: none; }
+        .hidden-content { display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-color); }
+        .framework-sub { margin-bottom: 1rem; }
+        .framework-sub strong { color: #fff; display: block; margin-bottom: 0.25rem; }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <header>
+        <h1>Shriharsha Gandani</h1>
+        <p style="color: var(--muted-text); font-size: 1.25rem; margin: 0 0 1rem 0;">AI Engineer & Software Developer</p>
+        <p>🔗 <a href="https://shriharsha-gandani-portfolio.ai.studio" target="_blank">Google AI Studio Profile</a></p>
+    </header>
+
+    <!-- SECTION 1: PROFESSIONAL BIO -->
+    <section class="section">
+        <h2>Professional Bio</h2>
+        <p>I am an AI Engineer and Software Developer specializing in leveraging cutting-edge LLMs and building scalable software architectures. With specialized experience utilizing platforms like Google AI Studio, my work focuses on creating intelligent, robust digital applications that optimize complex workflows, manage datasets effectively, and bring machine learning solutions to lifecycle deployment.</p>
+    </section>
+
+    <!-- SECTION 2: VALUE PROPOSITION & AUDIENCE -->
+    <section class="section">
+        <h2>Value Proposition & Audience</h2>
+        <div class="meta-grid">
+            <div>
+                <h3>Personal Value Proposition</h3>
+                <p>I translate complex AI methodologies and deep learning frameworks into scalable, user-centric production tools[cite: 1]. This portfolio demonstrates my capacity to build end-to-end data pipelines, optimize model interactions, and execute clean, production-ready software development practices[cite: 1].</p>
+            </div>
+            <div>
+                <h3>Target Audience</h3>
+                <p>This portfolio is purpose-built for engineering managers, technology recruiters, and technical founders[cite: 1]. It serves to validate my engineering competencies, code hygiene, and readiness to directly contribute to production AI work streams[cite: 1].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: ARTIFACTS -->
+    <section class="section">
+        <h2>Technical Artifacts</h2>
+
+        <!-- ARTIFACT 1 -->
+        <div class="card">
+            <h3>Predictive Modeling with Machine Learning</h3>
+            <p><strong>Objective:</strong> To build, evaluate, and optimize an intelligent predictive pipeline tailored to handle large, complex datasets efficiently[cite: 1].</p>
+            
+            <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">scikit-learn</span>
+                <span class="tag">pandas</span>
+                <span class="tag">Jupyter Notebook</span>
+                <span class="tag">Google AI Studio</span>
+            </div>
+
+            <button class="details-btn" onclick="toggleDetails('artifact1')">View Structural Framework Details ↓</button>
+
+            <div id="artifact1" class="hidden-content">
+                <div class="framework-sub">
+                    <strong>Introduction</strong>
+                    <p>This artifact is a specialized project centered around predictive intelligence, developed to validate automated dataset profiling and modern machine learning application pipelines[cite: 1].</p>
+                </div>
+                
+                <div class="framework-sub">
+                    <strong>Artifact Description</strong>
+                    <p><em>Process:</em> Executed complete engineering phases spanning data ingestion, exploratory preprocessing, custom model selection, iterative training, and performance metric evaluation[cite: 1]. This was completed as an individual contributor project[cite: 1].</p>
+                    <p><em>Tools and Technologies:</em> Engineered with Python, pandas, scikit-learn, and optimized within Jupyter notebook ecosystems[cite: 1].</p>
+                </div>
+
+                <div class="framework-sub">
+                    <strong>Artifact-Specific Value Proposition</strong>
+                    <p><em>Unique Value:</em> Demonstrates complete technical proficiency in developing, parsing, and interpreting deep predictive systems while maintaining pipeline performance[cite: 1].</p>
+                    <p><em>Relevance:</em> Directly aligns with my core value proposition by proving I can build enterprise-level data assets that yield transparent, actionable outcomes[cite: 1].</p>
+                </div>
+
+                <div class="framework-sub">
+                    <strong>Customization for Audience</strong>
+                    <p><em>Adaptations Made:</em> Implemented comprehensive model interpretability layers to break down underlying weights and vectors[cite: 1].</p>
+                    <p><em>Relevance:</em> Ensures that non-technical stakeholders or corporate decision-makers can audit system conclusions without technical friction[cite: 1].</p>
+                </div>
+
+                <div class="framework-sub">
+                    <strong>Reflection & Revisions</strong>
+                    <p><em>Significance:</em> Chosen specifically to showcase my background in cross-validation matrices and data preparation best practices[cite: 1].</p>
+                    <p><em>Lessons Learned:</em> Enhanced my approach to data bias mitigation strategies during target engineering steps[cite: 1].</p>
+                    <p><em>Feedback & Revisions:</em> Received community code reviews highlighting optimization improvements[cite: 1]. Integrated visual plotting dashboards and refactored underlying execution arrays to increase execution speeds[cite: 1].</p>
+                </div>
+
+                <div class="framework-sub">
+                    <strong>References</strong>
+                    <p>Scikit-learn Core Documentation, Google AI Studio Framework Guides[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOTE: Copy the structure above to append Artifacts 2 through 5 as you scale -->
+
+    </section>
+</div>
+
+<script>
+    function toggleDetails(id) {
+        const content = document.getElementById(id);
+        const btn = content.previousElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            btn.innerText = "View Structural Framework Details ↓";
+        } else {
+            content.style.display = "block";
+            btn.innerText = "Hide Details ↑";
+        }
+    }
+</script>
+
+</body>
+</html>
