@@ -104,6 +104,24 @@
             font-family: monospace;
         }
 
+        .action-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg-color);
+            font-weight: bold;
+            padding: 0.5rem 1.25rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            margin-right: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
         .details-btn {
             background: transparent;
             border: 1px solid var(--accent);
@@ -174,11 +192,11 @@
         <div class="grid-2">
             <div class="card">
                 <h3 style="color: #fff; margin-bottom: 0.5rem;">My Personal Value Proposition</h3>
-                <p>I combine enterprise data management discipline—such as profiling, normalization, and reconciliation—with modern AI application engineering. I don't just prompt models; I architect the underlying state trees, data ingestion workflows, and retrieval systems that make AI applications reliable at scale.</p>
+                <p>I combine enterprise data management discipline—such as profiling, normalization, and reconciliation—with modern AI application engineering[cite: 1]. I don't just prompt models; I architect the underlying state trees, data ingestion workflows, and retrieval systems that make AI applications reliable at scale.</p>
             </div>
             <div class="card">
                 <h3 style="color: #fff; margin-bottom: 0.5rem;">Target Audience</h3>
-                <p>This portfolio is created for engineering managers, lead data architects, and technical recruiters seeking an engineer who can handle complex backend data infrastructures and deploy robust AI solutions[cite: 1].</p>
+                <p>This portfolio is created for engineering managers, lead data architects, and technical recruiters seeking an engineer who can handle complex backend data infrastructures and deploy robust AI solutions.</p>
             </div>
         </div>
     </section>
@@ -215,7 +233,7 @@
         <!-- ARTIFACT 1: AI & ML HISTORY TIMELINE -->
         <div class="card">
             <h3 style="color: #fff;">Artifact 1: Interactive AI & ML History Timeline (1950–2026)</h3>
-            <p style="margin-top: 0.5rem;"><strong>Objective:</strong> I researched, synthesized, and designed a comprehensive visual slide deck tracking key milestones in Artificial Intelligence and Machine Learning—from Turing's foundational 1950 paper to modern transformer scale models[cite: 1].</p>
+            <p style="margin-top: 0.5rem;"><strong>Objective:</strong> I researched, synthesized, and designed a comprehensive visual slide deck tracking key milestones in Artificial Intelligence and Machine Learning—from Turing's foundational 1950 paper to modern transformer-scale models.</p>
             
             <div class="tag-list">
                 <span class="tag">AI Evolution</span>
@@ -224,9 +242,12 @@
                 <span class="tag">Technical Synthesis</span>
             </div>
 
+            <!-- ARTIFACT ACCESS LINK BUTTON -->
+            <a href="https://docs.google.com/presentation/d/1yYnUq-J8E4VzV10c85c07pZ_kQ8mS1A-q0V4N_gR2Sg/edit" target="_blank" class="action-btn">🚀 View Live Presentation Artifact ↗</a>
+
             <div style="background: #0f172a; padding: 1rem; border-radius: 6px; border: 1px solid var(--border); margin-top: 1rem;">
                 <strong style="color: var(--accent);">Key Challenge & My Solution:</strong>
-                <p style="font-size: 0.95rem; margin-top: 0.25rem;">Condensing 75+ years of complex mathematical paradigms (perceptron weights, backprop, LSTMs, and self-attention) into a clean presentation[cite: 1]. I structured the narrative into distinct chronological eras and embedded mathematical formulas ($Attention(Q,K,V) = \text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$) alongside historical data graphics[cite: 1].</p>
+                <p style="font-size: 0.95rem; margin-top: 0.25rem;">Condensing 75+ years of complex mathematical paradigms into a clean presentation[cite: 1]. I structured the narrative into distinct chronological eras and embedded mathematical formulas alongside historical data graphics.</p>
             </div>
 
             <button class="details-btn" onclick="toggleDetails('artifact1')">Expand Artifact Documentation Framework ↓</button>
@@ -235,41 +256,41 @@
             <div id="artifact1" class="collapsible-content">
                 <div class="framework-block">
                     <strong>Introduction</strong>
-                    <p>I authored this artifact to create an educational and architectural reference mapping the trajectory of artificial intelligence[cite: 1]. It spans the dawn of symbolic logic, neural network winters, statistical rebirths, and modern Foundation Models[cite: 1].</p>
+                    <p>I authored this artifact to create an educational and architectural reference mapping the trajectory of artificial intelligence. It spans the dawn of symbolic logic, neural network winters, statistical rebirths, and modern Foundation Models.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>My Engineering & Synthesis Process</strong>
-                    <p>I conducted technical research across historical publications, categorized major breakthroughs (Turing 1950, Dartmouth 1956, Backprop 1986, Deep Blue 1997, AlphaGo 2016, and Transformers 2017+), and designed visual slide layouts highlighting parameters, scaling laws, and algorithmic shifts[cite: 1]. I engineered this as an individual contributor[cite: 1].</p>
+                    <p>I conducted technical research across historical publications, categorized major breakthroughs (Turing 1950, Dartmouth 1956, Backprop 1986, Deep Blue 1997, AlphaGo 2016, and Transformers 2017+), and designed visual slide layouts highlighting parameters, scaling laws, and algorithmic shifts. I engineered this as an individual contributor.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Tools & Technologies Used</strong>
-                    <p>Google Slides visual design suite, mathematical formatting, archival data analysis, and technical document drafting tools[cite: 1].</p>
+                    <p>Google Slides visual design suite, mathematical formatting, archival data analysis, and technical document drafting tools.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Artifact-Specific Value Proposition</strong>
-                    <p><strong>Unique Value:</strong> Demonstrates my deep, foundational understanding of AI system evolution, proving I understand not just how to deploy modern tools, but the underlying mathematical principles that govern them[cite: 1].<br>
-                    <strong>Relevance:</strong> Directly supports my personal value proposition by showcasing my ability to translate highly abstract technical histories into structured, actionable knowledge[cite: 1].</p>
+                    <p><strong>Unique Value:</strong> Demonstrates my deep, foundational understanding of AI system evolution, proving I understand not just how to deploy modern tools, but the underlying mathematical principles that govern them.<br>
+                    <strong>Relevance:</strong> Directly supports my personal value proposition by showcasing my ability to translate highly abstract technical histories into structured, actionable knowledge.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Customization for Audience</strong>
-                    <p><strong>Adaptations Made:</strong> Highlighted parameter scales (65M to 175B+) and key algorithmic equations directly within the presentation slides[cite: 1].<br>
-                    <strong>Relevance:</strong> Allows technical leads and hiring managers to quickly verify my grasp of core ML architectures[cite: 1].</p>
+                    <p><strong>Adaptations Made:</strong> Highlighted parameter scales (65M to 175B+) and key algorithmic equations directly within the presentation slides.<br>
+                    <strong>Relevance:</strong> Allows technical leads and hiring managers to quickly verify my grasp of core ML architectures.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Reflection & Feedback Revisions</strong>
-                    <p><strong>Significance:</strong> Chosen to prove my holistic domain knowledge across symbolic AI, heuristics, and deep learning[cite: 1].<br>
-                    <strong>Lessons Learned:</strong> Deepened my perspective on hardware-software co-design and how GPU acceleration unlocked transformer scalability[cite: 1].<br>
-                    <strong>Feedback & Revisions:</strong> Peer reviews noted that early drafts contained too much block text; I restructured the slides to use visual cards, chronological badges, and tabular scaling breakdowns[cite: 1].</p>
+                    <p><strong>Significance:</strong> Chosen to prove my holistic domain knowledge across symbolic AI, heuristics, and deep learning.<br>
+                    <strong>Lessons Learned:</strong> Deepened my perspective on hardware-software co-design and how GPU acceleration unlocked transformer scalability.<br>
+                    <strong>Feedback & Revisions:</strong> Peer reviews noted that early drafts contained too much block text; I restructured the slides to use visual cards, chronological badges, and tabular scaling breakdowns.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>References</strong>
-                    <p>Computing Machinery and Intelligence (Turing, 1950), Attention Is All You Need (Vaswani et al., 2017), DeepMind AlphaGo Publications[cite: 1].</p>
+                    <p>Computing Machinery and Intelligence (Turing, 1950), Attention Is All You Need (Vaswani et al., 2017), DeepMind AlphaGo Publications.</p>
                 </div>
             </div>
         </div>
@@ -277,7 +298,7 @@
         <!-- ARTIFACT 2: TIEBREAKER -->
         <div class="card">
             <h3 style="color: #fff;">Artifact 2: The Tiebreaker (NWO Engine)</h3>
-            <p style="margin-top: 0.5rem;"><strong>Objective:</strong> I engineered an automated decision engine designed to parse complex operational variables, resolve logic contention, and act as a deterministic tiebreaker within the NWO system architecture[cite: 1].</p>
+            <p style="margin-top: 0.5rem;"><strong>Objective:</strong> I engineered an automated decision engine designed to parse complex operational variables, resolve logic contention, and act as a deterministic tiebreaker within the NWO system architecture.</p>
             
             <div class="tag-list">
                 <span class="tag">Python</span>
@@ -286,9 +307,12 @@
                 <span class="tag">System Design</span>
             </div>
 
+            <!-- ARTIFACT ACCESS LINK BUTTON -->
+            <a href="https://the-tiebreaker.vercel.app/" target="_blank" class="action-btn">🚀 Launch Tiebreaker Web App ↗</a>
+
             <div style="background: #0f172a; padding: 1rem; border-radius: 6px; border: 1px solid var(--border); margin-top: 1rem;">
                 <strong style="color: var(--accent);">Key Challenge & My Solution:</strong>
-                <p style="font-size: 0.95rem; margin-top: 0.25rem;">During initial testing, ambiguous data inputs led to non-deterministic edge-case outputs[cite: 1]. I solved this by engineering multi-turn validation constraints, tuning model alignment parameters, and implementing a strict fallback array that guaranteed 100% reliable tie-breaking execution[cite: 1].</p>
+                <p style="font-size: 0.95rem; margin-top: 0.25rem;">During initial testing, ambiguous data inputs led to non-deterministic edge-case outputs[cite: 1]. I solved this by engineering multi-turn validation constraints, tuning model alignment parameters, and implementing a strict fallback array that guaranteed 100% reliable tie-breaking execution.</p>
             </div>
 
             <button class="details-btn" onclick="toggleDetails('artifact2')">Expand Artifact Documentation Framework ↓</button>
@@ -297,41 +321,41 @@
             <div id="artifact2" class="collapsible-content">
                 <div class="framework-block">
                     <strong>Introduction</strong>
-                    <p>I built this artifact to solve algorithmic conflict resolution in automated workflows, ensuring that whenever system inputs produce equal logical weight, the application resolves the stalemate predictably without human intervention[cite: 1].</p>
+                    <p>I built this artifact to solve algorithmic conflict resolution in automated workflows, ensuring that whenever system inputs produce equal logical weight, the application resolves the stalemate predictably without human intervention.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>My Engineering Process</strong>
-                    <p>I formulated multi-branch routing mechanisms, structured custom data validation rules, and configured strict temperature bounds[cite: 1]. I created this project as an individual contributor to serve as a primary demonstration of my AI systems capabilities[cite: 1].</p>
+                    <p>I formulated multi-branch routing mechanisms, structured custom data validation rules, and configured strict temperature bounds. I created this project as an individual contributor to demonstrate my AI systems capabilities.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Tools & Technologies Used</strong>
-                    <p>Python orchestration scripts, conditional state trees, LLM execution pipelines, and data profiling frameworks[cite: 1].</p>
+                    <p>Python orchestration scripts, conditional state trees, LLM execution pipelines, and data profiling frameworks.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Artifact-Specific Value Proposition</strong>
-                    <p><strong>Unique Value:</strong> Proves my ability to control LLM outputs deterministically, moving beyond simple content generation into structured, enterprise-grade decision systems[cite: 1].<br>
-                    <strong>Relevance:</u> Demonstrates to engineering leaders that I can safeguard software workflows against logic deadlocks[cite: 1].</p>
+                    <p><strong>Unique Value:</strong> Proves my ability to control LLM outputs deterministically, moving beyond simple content generation into structured, enterprise-grade decision systems.<br>
+                    <strong>Relevance:</strong> Demonstrates to engineering leaders that I can safeguard software workflows against logic deadlocks.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Customization for Audience</strong>
-                    <p><strong>Adaptations Made:</strong> Added execution tracing and visual confidence logs so technical leads can inspect how each decision is made step-by-step[cite: 1].<br>
-                    <strong>Relevance:</strong> Eliminates black-box ambiguity for technical reviewers[cite: 1].</p>
+                    <p><strong>Adaptations Made:</strong> Added execution tracing and visual confidence logs so technical leads can inspect how each decision is made step-by-step.<br>
+                    <strong>Relevance:</strong> Eliminates black-box ambiguity for technical reviewers.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>Reflection & Feedback Revisions</strong>
-                    <p><strong>Significance:</strong> Selected to highlight my skills in software edge-case handling and fault-tolerant architecture[cite: 1].<br>
-                    <strong>Lessons Learned:</strong> Sharpened my expertise in model alignment profiles and state management[cite: 1].<br>
-                    <strong>Feedback & Revisions:</strong> Based on peer feedback regarding edge-case latency, I refactored the conditional logic tree to include an instant fallback layer, significantly improving response speed and accuracy under stress tests[cite: 1].</p>
+                    <p><strong>Significance:</strong> Selected to highlight my skills in software edge-case handling and fault-tolerant architecture.<br>
+                    <strong>Lessons Learned:</strong> Sharpened my expertise in model alignment profiles and state management.<br>
+                    <strong>Feedback & Revisions:</strong> Based on peer feedback regarding edge-case latency, I refactored the conditional logic tree to include an instant fallback layer, significantly improving response speed and accuracy under stress tests.</p>
                 </div>
 
                 <div class="framework-block">
                     <strong>References</strong>
-                    <p>NWO Systems Architecture Standards, Conditional Logic & State Machine Engineering Principles[cite: 1].</p>
+                    <p>NWO Systems Architecture Standards, Conditional Logic & State Machine Engineering Principles.</p>
                 </div>
             </div>
         </div>
