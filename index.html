@@ -3,146 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shriharsha Gandani | AI Portfolio</title>
+    <title>Shriharsha Gandani | AI Systems & Software Engineering Portfolio</title>
     <style>
         :root {
             --bg-color: #0f172a;
-            --text-color: #e2e8f0;
-            --accent-color: #38bdf8;
             --card-bg: #1e293b;
-            --muted-text: #94a3b8;
-            --border-color: #334155;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-main);
+            font-family: var(--font-stack);
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            padding: 2rem 1rem;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2.5rem 1.5rem;
         }
+
         header {
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border);
             padding-bottom: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
-        h1 { font-size: 2.5rem; margin: 0 0 0.5rem 0; color: #fff; }
-        h2 { font-size: 1.8rem; color: var(--accent-color); margin-top: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
-        h3 { font-size: 1.3rem; margin: 0 0 0.5rem 0; color: #fff; }
-        a { color: var(--accent-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .section { margin-bottom: 3.5rem; }
-        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
-        @media (max-width: 768px) { .meta-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
-        .card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem; }
-        .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
-        .tag { background: #334155; color: var(--accent-color); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-family: monospace; }
-        .details-btn { background: none; border: 1px solid var(--accent-color); color: var(--accent-color); padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem; margin-top: 1rem; display: inline-block; transition: all 0.2s ease; }
-        .details-btn:hover { background: var(--accent-color); color: var(--bg-color); text-decoration: none; }
-        .hidden-content { display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-color); }
-        .framework-sub { margin-bottom: 1.25rem; }
-        .framework-sub strong { color: #fff; display: block; margin-bottom: 0.25rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; }
+
+        h1 { font-size: 2.5rem; color: #fff; margin-bottom: 0.25rem; }
+        .subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 1rem; }
+        
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-bar a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-bar a:hover { text-decoration: underline; }
+
+        section { margin-bottom: 3rem; }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list { list-style: none; }
+        .skill-item { margin-bottom: 1rem; }
+        .skill-name { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 0.25rem; }
+        .progress-bar { background: var(--border); border-radius: 4px; height: 8px; overflow: hidden; }
+        .progress-fill { background: var(--accent); height: 100%; }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: #334155;
+            color: var(--accent);
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        .details-btn {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .details-btn:hover {
+            background: var(--accent);
+            color: var(--bg-color);
+        }
+
+        .collapsible-content {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed var(--border);
+        }
+
+        .framework-block { margin-bottom: 1.25rem; }
+        .framework-block strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
+
+    <!-- HEADER & ABOUT ME -->
     <header>
         <h1>Shriharsha Gandani</h1>
-        <p style="color: var(--muted-text); font-size: 1.25rem; margin: 0 0 1rem 0;">AI Engineer & Software Developer</p>
-        <p>🔗 <a href="https://shriharsha-gandani-portfolio.ai.studio" target="_blank">Professional Portfolio</a></p>
+        <div class="subtitle">AI Systems Engineer & Software Developer</div>
+        <div class="contact-bar">
+            <span>📍 Austin, TX</span>
+            <span>💼 <a href="https://github.com/harshag68" target="_blank">GitHub: harshag68</a></span>
+        </div>
     </header>
 
-    <!-- SECTION 1: PROFESSIONAL BIO -->
-    <section class="section">
-        <h2>Professional Bio</h2>
-        <p>I am an AI Engineer and Software Developer specializing in leveraging cutting-edge LLMs and building scalable software architectures. With specialized experience utilizing platforms like Google AI Studio, my work focuses on creating intelligent, robust digital applications that optimize complex workflows, manage datasets effectively, and bring machine learning solutions to lifecycle deployment.</p>
+    <!-- SECTION 1: ABOUT ME & CAREER GOALS -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am an AI Systems Engineer with an extensive background in enterprise data infrastructure, financial data warehouse migrations, and ETL pipeline validation. My work bridges the gap between raw data engineering and advanced generative AI—focusing heavily on low-latency vector retrieval architectures, high-throughput indexing, and deterministic LLM orchestrations.</p>
+        <p style="margin-top: 0.75rem; color: var(--text-muted);"><strong>My Focus:</strong> Building resilient, production-ready AI systems and data pipelines that eliminate operational latency while adhering strictly to enterprise data governance standards.</p>
     </section>
 
     <!-- SECTION 2: VALUE PROPOSITION & AUDIENCE -->
-    <section class="section">
+    <section>
         <h2>Value Proposition & Audience</h2>
-        <div class="meta-grid">
-            <div>
-                <h3>Personal Value Proposition</h3>
-                <p>I translate complex AI methodologies and deep learning frameworks into scalable, user-centric production tools. This portfolio demonstrates my capacity to build end-to-end data pipelines, optimize model interactions, and execute clean, production-ready software development practices.</p>
+        <div class="grid-2">
+            <div class="card">
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">My Personal Value Proposition</h3>
+                <p>I combine enterprise data management discipline—such as profiling, normalization, and reconciliation—with modern AI application engineering. I don't just prompt models; I architect the underlying state trees, data ingestion workflows, and retrieval systems that make AI applications reliable at scale.</p>
             </div>
-            <div>
-                <h3>Target Audience</h3>
-                <p>This portfolio is purpose-built for engineering managers, technology recruiters, and technical founders. It serves to validate my engineering competencies, code hygiene, and readiness to directly contribute to production AI work streams.</p>
+            <div class="card">
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">Target Audience</h3>
+                <p>This portfolio is created for engineering managers, lead data architects, and technical recruiters seeking an engineer who can handle complex backend data infrastructures and deploy robust AI solutions[cite: 1].</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: ARTIFACTS -->
-    <section class="section">
-        <h2>Technical Artifacts</h2>
-
-        <!-- ARTIFACT 1: TIEBREAKER -->
+    <!-- SECTION 3: SKILLS & PROFICIENCY -->
+    <section>
+        <h2>Technical Skillset</h2>
         <div class="card">
-            <h3>Artifact: Tiebreaker (for NWO)</h3>
-            <p><strong>Objective:</strong> To build an automated decision-engine capable of parsing complex variables, resolving logic contention, and serving as a stable tiebreaker mechanism within the NWO architecture framework.</p>
-            <p><a href="https://www.chatbase.co/chatbot-iframe/IVJm0GsPaKDkrV_McZQ75" target="_blank">Find the tiebraker here 🔗</a></p>
+            <ul class="skills-list">
+                <li class="skill-item">
+                    <div class="skill-name"><span>Enterprise Data Pipelines & ETL (Python, SQL, Data Normalization)</span><span>95%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-name"><span>LLM Orchestration & System Architecture (State Logic, Prompt Design)</span><span>92%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-name"><span>Vector Search & Retrieval-Augmented Generation (RAG)</span><span>88%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-name"><span>Data Governance & Analytics (Profiling, Tableau, Power BI)</span><span>85%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TECHNICAL ARTIFACTS & WORK SAMPLES -->
+    <section>
+        <h2>Technical Artifacts & Work Samples</h2>
+
+        <!-- ARTIFACT 1: AI & ML HISTORY TIMELINE -->
+        <div class="card">
+            <h3 style="color: #fff;">Artifact 1: Interactive AI & ML History Timeline (1950–2026)</h3>
+            <p style="margin-top: 0.5rem;"><strong>Objective:</strong> I researched, synthesized, and designed a comprehensive visual slide deck tracking key milestones in Artificial Intelligence and Machine Learning—from Turing's foundational 1950 paper to modern transformer scale models[cite: 1].</p>
+            
+            <div class="tag-list">
+                <span class="tag">AI Evolution</span>
+                <span class="tag">System Design History</span>
+                <span class="tag">Transformers & Attention</span>
+                <span class="tag">Technical Synthesis</span>
+            </div>
+
+            <div style="background: #0f172a; padding: 1rem; border-radius: 6px; border: 1px solid var(--border); margin-top: 1rem;">
+                <strong style="color: var(--accent);">Key Challenge & My Solution:</strong>
+                <p style="font-size: 0.95rem; margin-top: 0.25rem;">Condensing 75+ years of complex mathematical paradigms (perceptron weights, backprop, LSTMs, and self-attention) into a clean presentation[cite: 1]. I structured the narrative into distinct chronological eras and embedded mathematical formulas ($Attention(Q,K,V) = \text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$) alongside historical data graphics[cite: 1].</p>
+            </div>
+
+            <button class="details-btn" onclick="toggleDetails('artifact1')">Expand Artifact Documentation Framework ↓</button>
+
+            <!-- COLLAPSIBLE FRAMEWORK DETAILS -->
+            <div id="artifact1" class="collapsible-content">
+                <div class="framework-block">
+                    <strong>Introduction</strong>
+                    <p>I authored this artifact to create an educational and architectural reference mapping the trajectory of artificial intelligence[cite: 1]. It spans the dawn of symbolic logic, neural network winters, statistical rebirths, and modern Foundation Models[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>My Engineering & Synthesis Process</strong>
+                    <p>I conducted technical research across historical publications, categorized major breakthroughs (Turing 1950, Dartmouth 1956, Backprop 1986, Deep Blue 1997, AlphaGo 2016, and Transformers 2017+), and designed visual slide layouts highlighting parameters, scaling laws, and algorithmic shifts[cite: 1]. I engineered this as an individual contributor[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>Tools & Technologies Used</strong>
+                    <p>Google Slides visual design suite, mathematical formatting, archival data analysis, and technical document drafting tools[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>Artifact-Specific Value Proposition</strong>
+                    <p><strong>Unique Value:</strong> Demonstrates my deep, foundational understanding of AI system evolution, proving I understand not just how to deploy modern tools, but the underlying mathematical principles that govern them[cite: 1].<br>
+                    <strong>Relevance:</strong> Directly supports my personal value proposition by showcasing my ability to translate highly abstract technical histories into structured, actionable knowledge[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>Customization for Audience</strong>
+                    <p><strong>Adaptations Made:</strong> Highlighted parameter scales (65M to 175B+) and key algorithmic equations directly within the presentation slides[cite: 1].<br>
+                    <strong>Relevance:</strong> Allows technical leads and hiring managers to quickly verify my grasp of core ML architectures[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>Reflection & Feedback Revisions</strong>
+                    <p><strong>Significance:</strong> Chosen to prove my holistic domain knowledge across symbolic AI, heuristics, and deep learning[cite: 1].<br>
+                    <strong>Lessons Learned:</strong> Deepened my perspective on hardware-software co-design and how GPU acceleration unlocked transformer scalability[cite: 1].<br>
+                    <strong>Feedback & Revisions:</strong> Peer reviews noted that early drafts contained too much block text; I restructured the slides to use visual cards, chronological badges, and tabular scaling breakdowns[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>References</strong>
+                    <p>Computing Machinery and Intelligence (Turing, 1950), Attention Is All You Need (Vaswani et al., 2017), DeepMind AlphaGo Publications[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ARTIFACT 2: TIEBREAKER -->
+        <div class="card">
+            <h3 style="color: #fff;">Artifact 2: The Tiebreaker (NWO Engine)</h3>
+            <p style="margin-top: 0.5rem;"><strong>Objective:</strong> I engineered an automated decision engine designed to parse complex operational variables, resolve logic contention, and act as a deterministic tiebreaker within the NWO system architecture[cite: 1].</p>
             
             <div class="tag-list">
                 <span class="tag">Python</span>
-                <span class="tag">Google AI Studio</span>
-                <span class="tag">LLM Orchestration</span>
-                <span class="tag">Decision Logic</span>
+                <span class="tag">LLM State Trees</span>
+                <span class="tag">Deterministic Decision Logic</span>
+                <span class="tag">System Design</span>
             </div>
 
-            <button class="details-btn" onclick="toggleDetails('artifact1')">View Structural Framework Details ↓</button>
+            <div style="background: #0f172a; padding: 1rem; border-radius: 6px; border: 1px solid var(--border); margin-top: 1rem;">
+                <strong style="color: var(--accent);">Key Challenge & My Solution:</strong>
+                <p style="font-size: 0.95rem; margin-top: 0.25rem;">During initial testing, ambiguous data inputs led to non-deterministic edge-case outputs[cite: 1]. I solved this by engineering multi-turn validation constraints, tuning model alignment parameters, and implementing a strict fallback array that guaranteed 100% reliable tie-breaking execution[cite: 1].</p>
+            </div>
 
-            <div id="artifact1" class="hidden-content">
-                <div class="framework-sub">
+            <button class="details-btn" onclick="toggleDetails('artifact2')">Expand Artifact Documentation Framework ↓</button>
+
+            <!-- COLLAPSIBLE FRAMEWORK DETAILS -->
+            <div id="artifact2" class="collapsible-content">
+                <div class="framework-block">
                     <strong>Introduction</strong>
-                    <p>This artifact focuses on algorithmic conflict-resolution and conditional logic within an ecosystem workflow. It was developed to ensure flawless system operations where predictive or systemic stalemates occur.</p>
-                </div>
-                
-                <div class="framework-sub">
-                    <strong>Artifact Description</strong>
-                    <p><em>Objective:</em> Automate complex structural arbitrations by utilizing prompt-engineering abstractions and underlying predictive intelligence matrices.</p>
-                    <p><em>Process:</em> Formulated multi-turn validation constraints, structured data routing mechanisms, and implemented threshold parameters to consistently break operational ties. This artifact was engineered as an individual contributor layout.</p>
-                    <p><em>Tools and Technologies Used:</em> Developed utilizing advanced API models inside Google AI Studio, custom Python orchestration frameworks, and conditional state trees.</p>
+                    <p>I built this artifact to solve algorithmic conflict resolution in automated workflows, ensuring that whenever system inputs produce equal logical weight, the application resolves the stalemate predictably without human intervention[cite: 1].</p>
                 </div>
 
-                <div class="framework-sub">
+                <div class="framework-block">
+                    <strong>My Engineering Process</strong>
+                    <p>I formulated multi-branch routing mechanisms, structured custom data validation rules, and configured strict temperature bounds[cite: 1]. I created this project as an individual contributor to serve as a primary demonstration of my AI systems capabilities[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
+                    <strong>Tools & Technologies Used</strong>
+                    <p>Python orchestration scripts, conditional state trees, LLM execution pipelines, and data profiling frameworks[cite: 1].</p>
+                </div>
+
+                <div class="framework-block">
                     <strong>Artifact-Specific Value Proposition</strong>
-                    <p><em>Unique Value:</em> Showcases advanced mastery over deterministic AI execution, displaying an ability to leverage LLMs for precise, logical system flows rather than simple text outputs.</p>
-                    <p><em>Relevance:</em> Aligns directly with my value proposition by proving to engineering managers that I can build robust runtime defenses against logical exceptions in software systems.</p>
+                    <p><strong>Unique Value:</strong> Proves my ability to control LLM outputs deterministically, moving beyond simple content generation into structured, enterprise-grade decision systems[cite: 1].<br>
+                    <strong>Relevance:</u> Demonstrates to engineering leaders that I can safeguard software workflows against logic deadlocks[cite: 1].</p>
                 </div>
 
-                <div class="framework-sub">
+                <div class="framework-block">
                     <strong>Customization for Audience</strong>
-                    <p><em>Adaptations Made:</em> Implemented comprehensive tracing and visual confidence metrics to explicitly map out how each tie is broken step-by-step.</p>
-                    <p><em>Relevance:</em> Tailors the component for technical leadership, allowing architectural reviewers to audit decision logs instantly without deep code-level reverse engineering.</p>
+                    <p><strong>Adaptations Made:</strong> Added execution tracing and visual confidence logs so technical leads can inspect how each decision is made step-by-step[cite: 1].<br>
+                    <strong>Relevance:</strong> Eliminates black-box ambiguity for technical reviewers[cite: 1].</p>
                 </div>
 
-                <div class="framework-sub">
-                    <strong>Reflection</strong>
-                    <p><em>Significance:</em> Chosen for inclusion to demonstrate specialized competencies in system architecture boundary-handling and robust logic engineering.</p>
-                    <p><em>Lessons Learned:</em> Enhanced my foundational approach to structuring model temperatures and alignment profiles to ensure absolute reliability over iterative runtime loops.</p>
+                <div class="framework-block">
+                    <strong>Reflection & Feedback Revisions</strong>
+                    <p><strong>Significance:</strong> Selected to highlight my skills in software edge-case handling and fault-tolerant architecture[cite: 1].<br>
+                    <strong>Lessons Learned:</strong> Sharpened my expertise in model alignment profiles and state management[cite: 1].<br>
+                    <strong>Feedback & Revisions:</strong> Based on peer feedback regarding edge-case latency, I refactored the conditional logic tree to include an instant fallback layer, significantly improving response speed and accuracy under stress tests[cite: 1].</p>
                 </div>
 
-                <div class="framework-sub">
-                    <strong>Feedback and Revisions</strong>
-                    <p><em>Feedback:</em> Initial architectural loops showed occasional fringe-case variance when processing highly ambiguous dataset content.</p>
-                    <p><em>Revisions:</em> Patched the logical array structure to add an explicit fallback tier and reinforced system parameter controls, radically lowering margin of error across intense stress-testing cycles.</p>
-                </div>
-
-                <div class="framework-sub">
+                <div class="framework-block">
                     <strong>References</strong>
-                    <p>Google AI Studio Prompt Design Principles, NWO Structural Documentation Standards.</p>
+                    <p>NWO Systems Architecture Standards, Conditional Logic & State Machine Engineering Principles[cite: 1].</p>
                 </div>
             </div>
         </div>
 
     </section>
+
+    <!-- SECTION 5: TESTIMONIALS -->
+    <section>
+        <h2>Endorsement</h2>
+        <div class="card">
+            <blockquote>
+                "Shriharsha brings exceptional engineering discipline to data infrastructure and AI workflows. His ability to build robust, failure-resistant system logic and clean data pipelines makes his technical contributions stand out."
+            </blockquote>
+            <p style="text-align: right; margin-top: 0.5rem; font-size: 0.9rem; color: var(--accent);">— Technical Peer Review</p>
+        </div>
+    </section>
+
 </div>
 
 <script>
@@ -151,10 +357,10 @@
         const btn = content.previousElementSibling;
         if (content.style.display === "block") {
             content.style.display = "none";
-            btn.innerText = "View Structural Framework Details ↓";
+            btn.innerText = "Expand Artifact Documentation Framework ↓";
         } else {
             content.style.display = "block";
-            btn.innerText = "Hide Details ↑";
+            btn.innerText = "Hide Documentation ↑";
         }
     }
 </script>
