@@ -21,7 +21,7 @@
 - 🎓 **Master of Science in Artificial Intelligence** candidate at IWU National & Global.
 - 🎓 **Master of Science in Business Analytics** graduate from the University of North Texas.
 - 💻 **6 Years** of enterprise experience in data engineering, ETL pipelines, and SQL optimization.
-- 🛠 Experienced in managing large-scale datasets (**10M+ records**) using SQL Server, BigQuery, and AWS Redshift.
+- 🛠 Experienced in managing large-scale datasets using SQL Server, BigQuery, and AWS Redshift.
 - 🤖 Specialized in designing and deploying **multi-agent AI systems** and LLM workflows using GCP Vertex AI and Gemini models.
 - 🎯 Focused on delivering robust, automated, and scalable cloud-native data architectures.
 
